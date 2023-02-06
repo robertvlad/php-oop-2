@@ -13,17 +13,20 @@ $categoryCat = new category('Gatto');
 var_dump($categoryCat);
 
 
-$foodDog = new food('Scatoletta', 'imgcane.png', 19.99, $categoryDog, '01/01/2023', 10, ['Maiale', 'Pollo', 'Vitello']);
+$foodDog = new food('Scatoletta', 'imgcane.png', 19.99, $categoryDog, 10, ['Maiale', 'Pollo', 'Vitello'], '2023-02-06');
 var_dump($foodDog);
 
-$foodCat = new food('Croccantini', 'imggatto.png', 14.99, $categoryCat, '01/01/2023', 5, ['Verdure', 'Pesce']);
+$foodCat = new food('Croccantini', 'imggatto.png', 14.99, $categoryCat, 5, [], '2023-02-06');
 var_dump($foodCat);
 
-$gamesDog = new games('Pallina di gomma', 'imgpallina.png', 9.99, $categoryDog, '10x10', ['gomma']);
+$gamesDog = new games('Pallina di gomma', 'imgpallina.png', 9.99, $categoryDog, '', []);
 var_dump($gamesDog);
 
-$boxDog = new boxes('Casetta di legno', 'imgcasetta.png', 29.99, $categoryDog, 'Outdoor', 'large', ['legno', 'ferro']);
+$boxDog = new boxes('Casetta di legno', 'imgcasetta.png', 29.99, $categoryDog, '', '', []);
 var_dump($boxDog);
+
+$boxCat = new boxes('Cuscino', 'imgcuscino.png', 15.50, $categoryCat, 'Outdoor', 'small', ['stoffa, cotone']);
+var_dump($boxCat);
 
 ?>
 
