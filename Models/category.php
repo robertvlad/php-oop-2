@@ -3,11 +3,14 @@
 class category {
 
     private String $species;
+    private String $iconCategory;
 
-    function __construct(String $_species) 
+    function __construct(String $_species, String $_iconCategory) 
     {
         $this->setSpecies($_species);
+        $this->setIconCategory($_iconCategory);
     }
+
 
     public function getSpecies() 
     {
@@ -24,6 +27,21 @@ class category {
 
         return $this;
     }
-}
 
+    public function getIconCategory() 
+    {
+        return $this->iconCategory;
+    }
+
+    public function setIconCategory($_iconCategory) 
+    {
+        if(strlen($_iconCategory)) {
+            $this->iconCategory = $_iconCategory;
+        } else {
+            $this->iconCategory = 'default.png'; 
+        }
+
+        return $this;
+    }
+}
 ?>

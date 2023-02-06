@@ -10,7 +10,8 @@ class products {
     public category $category;
     private Bool $available;
 
-    function __construct(String $_title, String $_image = null, Float $_price, category $_category) {
+    function __construct(String $_title, String $_image = null, Float $_price, category $_category) 
+    {
         $this->setTitle($_title);
         $this->setImage($_image);
         $this->setPrice($_price);
@@ -18,11 +19,13 @@ class products {
         $this->setAvailable();
     }
 
-    public function getTitle() {
+    public function getTitle() 
+    {
         return $this->title;
     }
 
-    public function setTitle($_title) {
+    public function setTitle($_title) 
+    {
         if(strlen($_title)) {
             $this->title = $_title;
         } else {
@@ -32,11 +35,13 @@ class products {
         return $this;
     }
 
-    public function getImage() {
+    public function getImage() 
+    {
         return $this->image;
     }
 
-    public function setImage($_image) {
+    public function setImage($_image) 
+    {
         if(strlen($_image)) {
             $this->image = $_image;
         } else {
@@ -46,11 +51,13 @@ class products {
         return $this;
     }
 
-    public function getPrice() {
+    public function getPrice() 
+    {
         return $this->price;
     }
 
-    public function setPrice($_price) {
+    public function setPrice($_price) 
+    {
         if($_price > 0) {
             $this->price = $_price;
         } else {
@@ -61,19 +68,20 @@ class products {
     }
 
 
-    public function getAvailable() {
+    public function getAvailable() 
+    {
         return $this->available;
     }
 
-    private function setAvailable(){
+    private function setAvailable()
+    {
         if($this->price == 0) {
             $this->available = false;
         } else {
             $this->available = true;
         }
-        
+
         return $this;
     }
-}
-  
+}  
 ?>

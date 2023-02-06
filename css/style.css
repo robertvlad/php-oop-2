@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 80px;
+    background-color: #edb425;
+    color: #ffffff;
+}
+
+main {
+    padding-top: 85px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}
+
+.icon {
+    width: 30px;
+}
+
+.margin {
+    margin: 30px auto;
+}
+
+.card {
+    height: 100%;
+}
+

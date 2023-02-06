@@ -62,9 +62,8 @@ class food extends products {
         } else {
             $this->expirationDate = 'Scaduto';
         }
-
+        
         return $this;
     }
 }
-
 ?>

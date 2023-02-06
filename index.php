@@ -6,43 +6,33 @@ include_once __DIR__ . '/Models/games.php';
 include_once __DIR__ . '/Models/boxes.php';
 
 
-$categoryDog = new category('Cane');
-var_dump($categoryDog);
+$categoryCane = new category('Cane', 'dog.png');
+// var_dump($categoryCane);
 
-$categoryCat = new category('Gatto');
-var_dump($categoryCat);
+$categoryGatto = new category('Gatto', 'cat.png');
+// var_dump($categoryGatto);
+
+$foodDog = new food('Croccantini Oasy ', 'dog-food.jpg', 19.99, $categoryCane, 10, ['Maiale - ', 'Pollo - ', 'Vitello '], '2022-12-30');
+// var_dump($foodDog);
+
+$foodCat = new food('Croccantini Meow Mix', 'cat-food.jpg', 19.99, $categoryGatto, 10, ['Salmone - ', 'Verdure - ', 'Fibre - ', 'Molluschi'], '2022-10-25');
+// var_dump($foodCat);
+
+$gameDog = new games('Osso di gomma', 'osso-cane.jpg', 9.99, $categoryCane, 'L 40 x P 9 x H 4.5', ['Plastica - ', 'Caucciù ']);
+// var_dump($gameDog);
+
+$gameCat = new games('Cannetta con topo', 'gioco-gatto.jpg', 4.99, $categoryGatto, '50', ['Plastica - ', 'Gomma - ', 'Tessuto']);
+// var_dump($gameCat);
+
+$boxDog = new boxes('Casetta di legno', 'cuccia-cane.jpg', 39.99, $categoryCane, 'Outdoor', 'L 132 x P 85 x H 86', ['Legno di abete rosso - ', 'Bitume - ', 'Ferro ']);
+// var_dump($boxDog);
+
+$boxCat = new boxes('Tiragraffi', 'tiragraffi.jpg', 79.99, $categoryGatto, 'Indoor', 'Big', ['Velcro - ', 'Legno - ', 'Plastica - ', 'Sisal - ', 'Imbottito']);
+// var_dump($boxCat);
 
 
-$foodDog = new food('Scatoletta', 'imgcane.png', 19.99, $categoryDog, 10, ['Maiale', 'Pollo', 'Vitello'], '2023-02-06');
-var_dump($foodDog);
-
-$foodCat = new food('Croccantini', 'imggatto.png', 14.99, $categoryCat, 5, [], '2023-02-06');
-var_dump($foodCat);
-
-$gamesDog = new games('Pallina di gomma', 'imgpallina.png', 9.99, $categoryDog, '', []);
-var_dump($gamesDog);
-
-$boxDog = new boxes('Casetta di legno', 'imgcasetta.png', 29.99, $categoryDog, '', '', []);
-var_dump($boxDog);
-
-$boxCat = new boxes('Cuscino', 'imgcuscino.png', 15.50, $categoryCat, 'Outdoor', 'small', ['stoffa, cotone']);
-var_dump($boxCat);
+include __DIR__ . '/partials/header.php';
+include __DIR__ . '/partials/main.php';
+include __DIR__ . '/partials/footer.php';
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/style.css">
-        <title>Animals Shop</title>
-    </head>
-    <body>
-
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js" integrity="sha512-NCiXRSV460cHD9ClGDrTbTaw0muWUBf/zB/yLzJavRsPNUl9ODkUVmUHsZtKu17XknhsGlmyVoJxLg/ZQQEeGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    </body>
-</html>

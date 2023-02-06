@@ -8,7 +8,8 @@ class boxes extends products {
     private String $size;
     private Array $materials;
 
-    function __construct(String $_title, String $_image, Float $_price, category $_category, String $_where, String $_size, Array $_materials) {
+    function __construct(String $_title, String $_image, Float $_price, category $_category, String $_where, String $_size, Array $_materials) 
+    {
         parent::__construct($_title, $_image, $_price, $_category);
         $this->setWhere($_where);
         $this->setSize($_size);
@@ -60,7 +61,7 @@ class boxes extends products {
         } else {
             $this->size = "0x0"; 
         }
-
+        
         return $this;
     }
 }
